@@ -1,0 +1,27 @@
+ubuntu에서 설정에 들어간 후 json 파일로 들어가면 vscode 열림
+-> 여기서 remote linux 확장자 file install
+이제 ubuntu name이라던지 새 창 default 값 등을 변경 가능
+
+
+## 현재 window terminal 의 ubuntu terminal 위에 새로운 terminal을 입힐 것 ##
+## oh my zsh ##  terminal을 더 멋있게 만들어줌
+
+1) oh my zsh 설치전에 zsh 설치 필요(window,mac, ubuntu 다 다름)  ubuntu : apt install zsh
+   내가 admin user 가 아니라서 are you root라는 error 가 뜸
+   * 깨알 지식 : linux는 2가지 user type 이 존재 1) 일반 유저 2) root = super admin
+                root는 파일 시스템을 바꾸거나 안전하지 않은 작업을 할 때 권한을 가짐
+                일반 유저는 default값으로 일반유저=taewan을 사용
+     root 권한을 써야 할 때(=Permission denied)
+     ->  sudo [원하는 코드]  ex) sudo apt install zsh 
+         ## 휴.. 만약 또 안되면 : sudo apt-get install zsh -> sudo apt-get update -> sudo apt install zsh 까지 하기
+
+2) oh my zsh install code 는 오직 ubuntu console 에서만 작동됨
+   install code : sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
+
+이름이 ~로만 나온다면
+1. 아래 프로필에서 WSL 혹은 Ubuntu 선택
+2. 시작 디렉터리에 //mnt/c/Users/(윈도우 사용자 폴더 이름) 입력
+
+json 파일에서 설정:
+1. 다음 챕터 영상에서 colorScheme 설정하듯이 마지막 설정에 콤마(,) 추가하고 아랫줄에 "startingDirectory": "//mnt/c/Users/(윈도우 사용자 폴더 이름)" 입력

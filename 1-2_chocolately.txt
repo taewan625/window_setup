@@ -1,0 +1,22 @@
+window 와 linux 살펴 볼것임
+윈도우에 리눅스 서브시스템(WSL)을 설치하면 윈도우 상에서 리눅스 console을 사용 가능 -> 리눅스도 사용 가능, 윈도우도 사용 가능
+
+# 윈도우의 단점 : 리눅스처럼 progrem download가 쉽지 않고 exe file도 너무 많고 console에 가끔 나오지 않아서...
+window을 사용하면서도 progrem install 방법을 알려줄 것임
+
+# 이번 강의 핵심 = WSL(window subsystem for linux)을 배우는 것
+@@ 니코는 linux를 이용해서 하는 것을 강추하지만 이런 방법도 있다고 가르쳐 주는 것
+결론: 리눅스와 chocolatey 2가지 방법으로 progrem을 download할 수 있다
+
+@chocolatey
+  리눅스에 매번 갈 필요 없이 window를 사용하면서 개발 환경을 꾸릴 수 있는 방법을 보여줌
+  -> chocolatey download : window에 install 도와주는 것
+  1) chocolatey 우측 상단 try it now -> 하단에 Now run the following command: code copy 
+  (Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1')))
+  2) window power shell 우클릭 해서 관리자 권한으로 실행
+  3) copy한 것 넣고 chocolatey download
+  4) 이제 chocolatey로 모든 프로그램 download 가능
+  5) chocolatey main 화면에서 find packages를 이용하여 원하는 progrem code copy 후 powershell-admin으로 적용하여서 copy 내용 paste 하고 실행
+     download 진행 중에 뭔갈 요구하면 읽고 a 치면 됨
+
+  장점: console 창에 download 받은 progrem 명을 쓰면 잘 작동하는지 직관적으로 확인이 가능  tip: 확인 후 원래 위치로 갈때 exit() 사용

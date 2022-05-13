@@ -1,0 +1,12 @@
+
+1. powershell에서 wsl download 받기. 이 때 wsl code는 https://docs.microsoft.com/ko-kr/windows/wsl/install 에 나와있다.
+   ## 중요 ## 이 때 좌측에 설치에서 wsl 이전 버전의 수동 설치 단계를 통해서 WSL2 까지 설치
+   그리고 이 과정을 가기 전에 
+    제어판 -> 프로그램 및 기능 -> Windows 기능 켜기/끄기 1)Hyper-V 2) Linux용 Windows 하위 시스템 3) 가상 머신 플랫폼. 모두 체크 후 재부팅
+    BIOS에서 subversion enable 설정 하기   * BIOS: OS의 상위에 존재하고 BIOS 진입을 위해서 자신의 computer의 motherboard 인지 어떤 종류의 BIOS 인지 check 필요
+
+2. 1. 단계가 끝난 후 microsoft store에서 가장 최신 version의 ubuntu download 그리고 재부팅 -> error 떠서 18 version으로 진행
+
+3. ubuntu에서 아이디 비번 설정 후 이용하면 됨
+
+4. 내 ubuntu가 wsl2로 잘 작동하는지 wsl --list --verbose 로 확인 -> version 2이면 잘 된 것

@@ -1,0 +1,60 @@
+terminal themel 변경
+setting.json -> "schemes": [], 위에 link 들어가기
+
+원하는 theme 이름 복사하고 내 ubuntu 에 , 찍고  "colorScheme": "Vintage" 넣기
+        "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+        "hidden": false,
+        "name": "Ubuntu-18.04",
+        "source": "Windows.Terminal.Wsl",
+        "startingDirectory": "//mnt/c/Users/Taewan"
+
+        "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+        "hidden": false,
+        "name": "Ubuntu-18.04",
+        "source": "Windows.Terminal.Wsl",
+        "startingDirectory": "//mnt/c/Users/Taewan",
+        "colorScheme": "Vintage"
+
+MS에서 제공하는게 너무 짜친다 하면 terminal splash 사용 할 것임
+1) terminal splash site 들어가고
+2) 원하는 theme code copy 
+3) "schemes": [ ]  안에 copy 해주면 되고 "colorScheme": "###" 이름 변경하면 된다
+
+
+이것도 짜친다 그러면 Powerlevel10k 설치 할 것임. 이것은 전에 설치한 terminal인 zsh를 위한 theme
+
+1) Powerlevel10k github -> Installation 의 oh my zsh click
+2) 1. Clone the repository: git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k          복사하고
+3) sudo를 붙여서 실행할 것 - ubuntu 이용
+4) active 하기 위해서 '.zshrc 파일을 수정해야 함 - 이 file은 root 경로에 생성 되어 있다
+   우리의 가상환경인 ubuntu의 root를 들어가기 위해서 code ~/.zshrc 로 vscode로 open
+   -> 이곳의 환경설정 옵션들은 terminal을 위한 것. !! Windows terminal이 아닌 oh my zsh 를 위한 것
+5) ZSH_THEME="robbyrussell" 를 아까 Powerlevel10k github/oh my zsh/ 2번 항목인 Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc. 로 변경
+6) 다시 ubuntu를 restart 하면 diamond가 보이냐고 물음 - 근데 안보일꺼임
+
+7) setting.json 에서 font를 변경 할 것임
+   다시 Powerlevel10k github/oh my zsh 하단으로 내려가면 MesloLGS NF가 있을 꺼임 이걸 default에 붙여주면 됨
+   !!!! 먼저 Powerlevel10k github/oh my zsh 하단 MesloLGS NF 쪽에 download 해라는 file 4개 존재 이거 install !!!
+      
+       "defaults": {
+      "fontFace": "MesloLGS NF"
+    },
+8) vscode 설정 창에 terminal - integrated - fontfamily 에서 MesloLGS NF 적용
+
+9) 그러면 끝!!
+
+
+vscode에서도 terminal에 적용하기
+
+1) integrated terminal shell 친 후 Terminal › Integrated › Default Profile: Windows -> powershell을 Ubuntu-18.04 (WSL) check
+2) settings.json 
+"copyFormatting": "none",
+  "copyOnSelect": false,
+  "defaultProfile": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+  "terminal.integrated.shell.windows": "c:\\Windows\\System32\\Ubuntu-18.04.exe",      <<----- 요런식으로 넣어주기
+  "profiles": {
+    "defaults": {
+      "fontFace": "MesloLGS NF"
+    },
+
+3) vscode 껏다 키셈

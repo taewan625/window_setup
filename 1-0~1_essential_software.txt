@@ -1,0 +1,6 @@
+내가 progremer라면 필수적으로 가져야 하는 software
+1. Google chrome O    : API , 개발자 환경이 좋은           |          ms edge X
+2. Visual studio code : 아닥하고 걍 좋음
+   download 방법 : 추가작업 다 체크하고 download
+   customizing : extension - python, ESLint, Prettier, Material Theme, Material icon Theme
+3. git download

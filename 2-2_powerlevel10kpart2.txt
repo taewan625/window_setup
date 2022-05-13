@@ -1,0 +1,15 @@
+
+
+ls colors 바깥 테두리 색깔 
+1) terminal 설정파일을 수정해야함 ->ubuntu에서 code ~/.zshrc
+   들어가진 vscode에서 제일 하단에 LS_COLORS="ow=01;36;40" && export LS_COLORS 붙여 넣기
+   -> 기본적으로 터미널의 컬러를 수정하는 방법
+
+그리고 저번에 배운 terminalsplash에서 원하는 코드 넣고 name만 바꿔주면 이쁘게 설정이 된다
+
+
+정리
+window terminal의 ubuntu의 setting 은 settings.json을 이용했고
+vscode 내부의 termianl 설정은 vscode color theme이 적용 된다 => 바꾸고 싶으면 vscode 테마를 바꾸면 됨
+
+마지막으로 powerlevel10k 환경설정을 하려면 unbuntu에서 p10k confugure 하면 됨

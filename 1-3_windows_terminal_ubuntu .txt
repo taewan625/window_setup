@@ -1,0 +1,8 @@
+powershell console 창이 안예뻐서 window terminal 사용할 것임
+
+1) chocolatey에서 terminal 쳐서 window terminal  code copy해서 관리자 권한으로 실행하여서 download 하기
+
+2) 이후 terminal admin으로 실행해서 wsl download 할 것인데 google에서 enable wsl2 를 searching 후 code copy
+   * chocolatey 에도 wsl 치면 나옴 상관 없는 듯
+
+3) 완료 후 ubuntu 설치 -> restart computer -> ubuntu 실행
